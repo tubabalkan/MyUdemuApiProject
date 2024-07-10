@@ -22,13 +22,13 @@ namespace HotelProject.WepApi.Controllers
 			var values = _testimonialService.TGetList();
 			return Ok(values);
 		}
-		[HttpPost]
-		public IActionResult AddTestimonial(Testimonial testimonial)
-		{
-			_testimonialService.TInsert(testimonial);
-			return Ok();
-		}
-		[HttpDelete]
+        [HttpPost]
+        public IActionResult AddTestimonial(Testimonial testimonial)
+        {
+            _testimonialService.TInsert(testimonial);
+            return Ok();
+        }
+        [HttpDelete("{id}")]
 		public IActionResult DeleteTestimonial(int id)
 		{
 			var values = _testimonialService.TGetById(id);

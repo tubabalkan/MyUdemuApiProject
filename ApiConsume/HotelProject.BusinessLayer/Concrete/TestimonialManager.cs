@@ -12,7 +12,13 @@ namespace HotelProject.BusinessLayer.Concrete
 	public class TestimonialManager : ITestimonialService
 	{
 		private readonly ITestimonialDal _testimonialDal;
-		public void TDelete(Testimonial t)
+
+        public TestimonialManager(ITestimonialDal testimonialDal)
+        {
+            _testimonialDal = testimonialDal;
+        }
+
+        public void TDelete(Testimonial t)
 		{
 			_testimonialDal.Delete(t);
 		}

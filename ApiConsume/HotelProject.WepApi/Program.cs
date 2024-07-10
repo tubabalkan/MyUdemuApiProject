@@ -3,6 +3,7 @@ using HotelProject.BusinessLayer.Concrete;
 using HotelProject.DataAccessLayer.Abstract;
 using HotelProject.DataAccessLayer.Concrete;
 using HotelProject.DataAccessLayer.EntityFramework;
+using HotelProject.WepApi.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,7 @@ builder.Services.AddScoped<IServicesService, ServicesMananger>();
 
 builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
 builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
+
 builder.Services.AddScoped<ISubscribeDal, EfSubscribeDal>();
 builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
 builder.Services.AddCors(opt =>
@@ -32,6 +34,7 @@ builder.Services.AddCors(opt =>
 		opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
 	});
 });
+builder.Services.AddAutoMapper(typeof(AutoMapperConfig));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
