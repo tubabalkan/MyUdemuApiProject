@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.EntityLayer.Concrete
 {
-    public class AppUser:IdentityUser<int>
+    public class AppRole:IdentityRole<int>
     {
-        public int Name { get; set; }
-        public int Surname { get; set; }
-        public int City { get; set; }
     }
 }
