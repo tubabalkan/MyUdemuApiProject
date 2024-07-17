@@ -27,6 +27,9 @@ builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 
 builder.Services.AddScoped<ISubscribeDal, EfSubscribeDal>();
 builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
+
+builder.Services.AddScoped<IAboutDal, EfAboutDal>();
+builder.Services.AddScoped<IAbotService, AboutManager>();
 builder.Services.AddCors(opt =>
 {
 	opt.AddPolicy("OtelApiCors", opts =>
