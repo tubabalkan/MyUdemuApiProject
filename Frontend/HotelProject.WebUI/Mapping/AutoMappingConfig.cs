@@ -5,6 +5,10 @@ using HotelProject.WebUI.Dtos.LoginDto;
 using HotelProject.WebUI.Dtos.RegisterDto;
 using HotelProject.WebUI.Dtos.RoomDto;
 using HotelProject.WebUI.Dtos.ServicesDto;
+using HotelProject.WebUI.Dtos.StaffDto;
+using HotelProject.WebUI.Dtos.SubscribeDto;
+using HotelProject.WebUI.Dtos.TestimonialDto;
+using System.Security.Cryptography.X509Certificates;
 
 namespace HotelProject.WebUI.Mapping
 {
@@ -20,6 +24,11 @@ namespace HotelProject.WebUI.Mapping
                CreateMap<ResultAboutDto, About>().ReverseMap();
                CreateMap<UpdateAboutDto, About>().ReverseMap();
                CreateMap<ResultRoomDto, Room>().ReverseMap();
+               CreateMap<ResultTestimonialDto, Testimonial>().ReverseMap();
+               CreateMap<ResultStaffDto, Staff>().ReverseMap();
+               CreateMap<ResultSubscribeDto, Subscribe>().ReverseMap();
+               CreateMap<CreateSubscribeDto, Subscribe>().ReverseMap();
+            
         }
     }
 }

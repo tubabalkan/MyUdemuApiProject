@@ -1,10 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HotelProject.WebUI.Dtos.RoomDto;
+using HotelProject.WebUI.Dtos.ServicesDto;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+
 namespace HotelProject.WebUI.ViewComponents.Default
 {
     public class _ServicePartial : ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        public _ServicePartial(IHttpClientFactory httpClientFactory)
         {
+            _httpClientFactory = httpClientFactory;
+        }
+
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("http://localhost:5023/api/Services");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultServicesDto>>(jsonData);
+                return View(values);
+            }
+
             return View();
         }
     }
