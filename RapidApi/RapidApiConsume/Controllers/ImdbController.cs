@@ -1,12 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using RapidApiConsume.Models;
 using System.Net.Http.Headers;
 
 namespace RapidApiConsume.Controllers
 {
     public class ImdbController : Controller
     {
-        public async Task<IActionResult> Index() { 
-
+        public async Task<IActionResult> Index() 
+        { 
+            List<ApiMoviViewModel> apiMoviViewModels = new List<ApiMoviViewModel>();
             
             var client = new HttpClient();
             var request = new HttpRequestMessage
@@ -24,9 +27,12 @@ namespace RapidApiConsume.Controllers
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
+                apiMoviViewModels=JsonConvert.DeserializeObject<List<ApiMoviViewModel>>(body);
+                return View(apiMoviViewModels);
+
                
             }
-            return View();
+         
         }
     }
 }

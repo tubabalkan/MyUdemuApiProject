@@ -1,0 +1,26 @@
+﻿@model List<ApiMoviViewModel>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>Film Adı</th>
+            <th>Puan</th>
+            <th>Yılı</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th>@item.title</th>
+                <th>@item.imdb_id</th>
+                <th>@item.year</th>
+                <td><a href="#" class="btn btn-dark">Fragmanı Oynat</a></td>
+            </tr>
+        }
+    </table>
+</div>
