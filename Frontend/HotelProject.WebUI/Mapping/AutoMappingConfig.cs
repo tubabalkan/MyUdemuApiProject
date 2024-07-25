@@ -30,6 +30,8 @@ namespace HotelProject.WebUI.Mapping
                CreateMap<ResultSubscribeDto, Subscribe>().ReverseMap();
                CreateMap<CreateSubscribeDto, Subscribe>().ReverseMap();
                CreateMap<CreateBookingDto, Booking>().ReverseMap();
+               CreateMap<ResultBookingDto, Booking>().ReverseMap();
+               CreateMap<ApprovedRezervationBookingDto, Booking>().ReverseMap();
             
         }
     }
