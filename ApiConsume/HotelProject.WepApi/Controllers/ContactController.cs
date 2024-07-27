@@ -15,7 +15,12 @@ namespace HotelProject.WepApi.Controllers
         {
             _contactservice = contactservice;
         }
-
+        [HttpGet]
+        public IActionResult InboxListContact()
+        {
+            var values = _contactservice.TGetList();
+            return Ok(values);
+        }
         [HttpPost]
         public IActionResult AddContact(Contact contact)
         {
@@ -23,6 +28,25 @@ namespace HotelProject.WepApi.Controllers
             _contactservice.TInsert(contact);
             return Ok();
         }
-       
+        [HttpDelete("{id}")]
+        public IActionResult DeleteGuest(int id)
+        {
+            var values = _contactservice.TGetById(id);
+            _contactservice.TDelete(values);
+            return Ok();
+        }
+        [HttpPut]
+        public IActionResult UpdateGuest(Contact contact)
+        {
+            _contactservice.TUpdate(contact);
+            return Ok();
+        }
+        [HttpGet("{id}")]
+        public IActionResult GetGuest(int id)
+        {
+            var values = _contactservice.TGetById(id);
+            return Ok(values);
+        }
+
     }
 }

@@ -4,11 +4,9 @@
     Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
 }
 
-<div class="col-lg-12">
-    <div class="card">
-        <div class="card-body">
+      
             <div class="email-left-box">
-                <a href="email-compose.html" class="btn btn-primary btn-block">Yeni Mesaj Oluştur</a>
+                <a href="/AdminContact/AddSendMessage/" class="btn btn-primary btn-block">Yeni Mesaj Oluştur</a>
                 @await Html.PartialAsync("SideBarAdminContactPartial")
                 @await Html.PartialAsync("SideBarAdminContactCategoryPartial")
             </div>
@@ -33,18 +31,16 @@
                                     </div><span class="star-toggle ti-star"></span>
                                 </div>
                                 <div class="col-mail col-mail-2">
-                                    <div class="subject">Ingredia Nutrisha, A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture</div>
+                                   
+                                    <div class="subject">@item.Message.Substring(0,100)...</div>
                                     <div class="date">11:49 am</div>
                                 </div>
                             </a>
                         </div>
                     }
-                 
                 </div>
-                <!-- panel -->
-
             </div>
-        </div>
-    </div>
-</div>
+            
+
+
 
