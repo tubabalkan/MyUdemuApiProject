@@ -38,8 +38,8 @@ namespace HotelProject.WebUI.Controllers
         public async Task<IActionResult> AddSendMessage(CreateSendMessageDto createSendMessageDto)
         {
             createSendMessageDto.SenderMail = "admin@gmail.com";
-            createSendMessageDto.SenderMail = "admin";
-            createSendMessageDto.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+            createSendMessageDto.SenderName = "admin";
+            createSendMessageDto.Date = DateTime.Now;
          
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createSendMessageDto);
@@ -51,6 +51,19 @@ namespace HotelProject.WebUI.Controllers
             }
             return View();
         }
+        public async Task<IActionResult> SendBox()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("http://localhost:5023/api/SendMessage");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultSendBoxDto>>(jsonData);
+                return View(values);
+            }
+
+            return View();
+        }
         public PartialViewResult SideBarAdminContactPartial()
         {
             return PartialView();
@@ -58,6 +71,18 @@ namespace HotelProject.WebUI.Controllers
         public PartialViewResult SideBarAdminContactCategoryPartial()
         {
             return PartialView();
+        }
+        public async Task<IActionResult> MessageDetails(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:5023/api/Contact/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<GetMessageByIdDto>(jsonData);
+                return View(values);
+            }
+            return View();
         }
     }
 }
