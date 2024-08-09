@@ -12,6 +12,7 @@ using HotelProject.WebUI.Dtos.ServicesDto;
 using HotelProject.WebUI.Dtos.StaffDto;
 using HotelProject.WebUI.Dtos.SubscribeDto;
 using HotelProject.WebUI.Dtos.TestimonialDto;
+using HotelProject.WebUI.Dtos.MessageCategoryDto;
 using System.Security.Cryptography.X509Certificates;
 
 namespace HotelProject.WebUI.Mapping

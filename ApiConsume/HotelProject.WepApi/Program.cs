@@ -40,6 +40,8 @@ builder.Services.AddScoped<IGuestService, GuestManager>();
 builder.Services.AddScoped<ISendMessageDal, EfSendMessageDal>();
 builder.Services.AddScoped<ISendMessageService, SendMessageManager>();
 
+builder.Services.AddScoped<ImessageCategoryDal, EfMessageCategoryDal>();
+builder.Services.AddScoped<IMessageCategoryService, MessageCategoryManager>();
 builder.Services.AddCors(opt =>
 {
 	opt.AddPolicy("OtelApiCors", opts =>

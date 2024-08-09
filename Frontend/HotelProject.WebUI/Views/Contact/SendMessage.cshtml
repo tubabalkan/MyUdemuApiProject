@@ -39,6 +39,7 @@
                                     <label for="name">Adınız Soyadınız</label>
                                 </div>
                             </div>
+                           
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control" id="email" placeholder="Mail Adresiniz" name="Mail">
@@ -47,8 +48,16 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
+                                    @Html.DropDownListFor(
+                                    x => x.MessageCategoryId,
+                                    (List<SelectListItem>)ViewBag.V,
+                                    new { @class = "form-control" } // Yazım hatası düzeltildi
+                                    )<label for="subject">Konyu Seçiniz</label>
+                                </div>
+                                <br />
+                                <div class="form-floating">
                                     <input type="text" class="form-control" id="subject" placeholder="Konu" name="Subject">
-                                    <label for="subject">Konu</label>
+                                    <label for="subject">Konu Başlığını Yazınız</label>
                                 </div>
                             </div>
                             <div class="col-12">
