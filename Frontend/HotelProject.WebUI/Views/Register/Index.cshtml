@@ -35,8 +35,8 @@
                             <div class="card-body pt-5">
                                 
                                     <a class="text-center" href="index.html"> <h4>Kayıt Ol</h4></a>
-        
-                                <form class="mt-5 mb-5 login-input" method="post">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <form class="mt-5 mb-5 login-input" method="post" asp-action="Index">
                                     <div class="form-group">
                                         <input type="text" class="form-control"  placeholder="Adınız" asp-for="Name">
                                         <span asp-validation-for="Name" class="text-warning"></span>
@@ -52,6 +52,14 @@
                                     <div class="form-group">
                                          <input type="text" class="form-control"  placeholder="Mail Adresiniz" asp-for="Mail">
                                         <span asp-validation-for="Mail" class="text-warning"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Departmanınız" asp-for="WorkDepartment">
+                                        <span asp-validation-for="WorkDepartment" class="text-warning"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" placeholder="Lokasyon ID" asp-for="WorkLocationID">
+                                        <span asp-validation-for="WorkLocationID" class="text-warning"></span>
                                     </div>
                                     <div class="form-group">
                                          <input type="text" class="form-control"  placeholder="Şehriniz" asp-for="City">
