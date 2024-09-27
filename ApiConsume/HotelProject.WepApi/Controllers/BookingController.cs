@@ -59,5 +59,11 @@ namespace HotelProject.WepApi.Controllers
             _bookingService.TBookingStatusChangeApproved2(id);
             return Ok();
         }
+        [HttpGet("Last6Book")]
+        public IActionResult Last6Book()
+        {
+            var values = _bookingService.TLast6Booking();
+            return Ok(values);
+        }
     }
 }
