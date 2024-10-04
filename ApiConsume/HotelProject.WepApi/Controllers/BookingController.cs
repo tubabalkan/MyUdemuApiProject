@@ -47,6 +47,7 @@ namespace HotelProject.WepApi.Controllers
             var values = _bookingService.TGetById(id);
             return Ok(values);
         }
+
         [HttpPut("UpdateBookingR")]
         public IActionResult UpdateBookingR(Booking booking)
         {
@@ -64,6 +65,24 @@ namespace HotelProject.WepApi.Controllers
         {
             var values = _bookingService.TLast6Booking();
             return Ok(values);
+        }
+        [HttpGet("BookingAproved")]
+        public IActionResult BookingAproved(int id)
+        {
+            _bookingService.TBookingStatusChangeApproved3(id);
+            return Ok();
+        }
+        [HttpGet("BookingCancel")]
+        public IActionResult BookingCancel(int id)
+        {
+            _bookingService.TBookingStatusChangeCancel(id);
+            return Ok();
+        }
+        [HttpGet("BookingWait")]
+        public IActionResult BookingWait(int id)
+        {
+            _bookingService.TBookingStatusChangeBeklet(id);
+            return Ok();
         }
     }
 }
