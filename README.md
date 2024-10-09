@@ -1,10 +1,10 @@
 # Api Projesi
 Udemy üzerinden Murat Yücedağ hocamın 200+ derslik 24 saatlik içerikten oluşan Asp.Net Core Api - Rapid Api ve Api Consume eğitimini tamamladım ve ortaya çok güzel bir proje çıktı.
 ## Projeye Genel Bakış 
-📍 Projemiz bir otelin online rezervasyon sistemi üzerine kurgulanmış bir senaryo işleyişine sahip. </br>
-📍 Proje tamamıyla Api ile geliştirildi. </br>
-📍 Apileri test etmek için Swagger ve Postman kullanıldı. </br>
-📍 Identity ve rolleme de kullanıldı.</br>
+📍 Otel rezervasyon sistemimiz, kullanıcıların otelleri inceleyip rezervasyon yapabileceği, verilerin dinamik olarak güncellendiği, hem kullanıcı hem de yönetici (admin) tarafı olan bir platform olarak tasarlanmıştır. Sistem, otel verileri, oda detayları, istatistikler ve iletişim bilgileri gibi bilgileri içermektedir. Uygulama tamamıyla API tabanlı geliştirilmiş ve veriler, ASP.NET Core altyapısıyla sağlanan API servisleri üzerinden çekilip işlenmiştir.</br>
+👩‍💻 Bu proje, kullanıcı dostu bir arayüz ve performansı optimize edilmiş bir backend ile verimli bir rezervasyon deneyimi sunmayı hedefler. Kullanıcılar, otel ve oda bilgilerini inceleyebilir, rezervasyon işlemlerini tamamlayabilir, rezervasyon detaylarını alabilir ve ilgili mailleri gerçek zamanlı olarak e-posta hesaplarına ulaşacak şekilde alabilirler. Yönetici tarafında ise otel bilgileri, oda yönetimi, istatistiksel analizler ve kullanıcı bilgileri yönetilmektedir.</br>
+👩‍💻Ayrıca, kullanıcıların güvenliğini sağlamak için kimlik doğrulama ve yetkilendirme işlemleri ASP.NET Identity ile entegre edilmiştir. Öte yandan, döviz kuru ve sosyal medya verileri gibi harici API’lerle entegrasyon gerçekleştirilmiş, dinamik veri güncellemeleri sistemin bir parçası haline getirilmiştir.
+Proje, role-based (rol tabanlı) erişim kontrolü ile yönetilmiş ve her rolün kendine has yetkileri belirlenmiştir. Projenin tüm katmanlarında Dependency Injection ve SOLID prensiplerine uygun bir geliştirme stratejisi izlenmiştir. Bu sayede, daha temiz bir kod yapısı ve bakımı kolay bir sistem oluşturulmuştur. Proje geliştirilme sürecinde Swagger ve Postman kullanılarak API testleri gerçekleştirilmiştir.
 ## 📌 Kullanılan Teknolojiler
 ✔ C#, ASP.NET Core(Dil ve Framework)</br>
 ✔ Entity Framework (ORM) 6.0 </br>
