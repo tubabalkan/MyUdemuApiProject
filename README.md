@@ -1,19 +1,19 @@
 ## Api Projesi
 Udemy üzerinden Murat Yücedağ hocamın 200+ derslik 24 saatlik içerikten oluşan Asp.Net Core Api - Rapid Api ve Api Consume eğitimini tamamladım ve ortaya çok güzel bir proje çıktı.
-
-## Kullanılan Teknolojiler
-✔Asp.Net Core API
-✔.NET CORE 5.0
-✔API Consume
-✔Entity Framework Core ile Database İşlemleri
-✔Repository Design Pattern Uygulanması
-✔N Tier Mimarisi
-✔Fluent Validation İşlemleri
-✔Veri iletişimi yapmak için DTO kullanımı
-✔Asp.Net Core Identity Kullanımı
-✔Rapid API
-✔JSON Web Token (JWT)
-## Proje içi Görseller
+# Projeye Genel Bakış 
+## 📌 Kullanılan Teknolojiler
+✔Asp.Net Core API </br>
+✔.NET CORE 5.0</br>
+✔API Consume</br>
+✔Entity Framework Core ile Database İşlemleri</br>
+✔Repository Design Pattern Uygulanması</br>
+✔N Tier Mimarisi</br>
+✔Fluent Validation İşlemleri</br>
+✔Veri iletişimi yapmak için DTO kullanımı</br>
+✔Asp.Net Core Identity Kullanımı</br>
+✔Rapid API</br>
+✔JSON Web Token (JWT)</br>
+## 📌 Proje içi Görseller
 ![anasayfa1](https://github.com/user-attachments/assets/cd3cf6aa-b2ed-48be-a6ab-235e056b2fbc)
 ![anasayfa2](https://github.com/user-attachments/assets/bfe637bc-9b31-4186-a627-4ff27b0575a0)
 ![anasayfa3](https://github.com/user-attachments/assets/36e38416-e8c9-4cba-8525-f33398aefdc0)
