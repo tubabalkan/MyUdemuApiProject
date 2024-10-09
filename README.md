@@ -19,7 +19,7 @@ Udemy üzerinden Murat Yücedağ hocamın 200+ derslik 24 saatlik içerikten olu
 ✔ Mapping(AutoMapper ile DTO ve Entity dönüşümleri.) </br>
 ✔ Validation (FluentValidation ile veri doğrulama süreçleri.) </br>
 ## 📌 Proje içi Görseller
-![anasayfa1](https://github.com/user-attachments/assets/cd3cf6aa-b2ed-48be-a6ab-235e056b2fbc)
+![anasayfa1](https://github.com/user-attachments/assets/cd3cf6aa-b2ed-48be-a6ab-235e056b2fbc) 
 ![anasayfa2](https://github.com/user-attachments/assets/bfe637bc-9b31-4186-a627-4ff27b0575a0)
 ![anasayfa3](https://github.com/user-attachments/assets/36e38416-e8c9-4cba-8525-f33398aefdc0)
 ![anasayfa4](https://github.com/user-attachments/assets/a4ad63e6-1886-463a-89c5-db054d33221c)
