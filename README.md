@@ -1,18 +1,23 @@
-## Api Projesi
+# Api Projesi
 Udemy üzerinden Murat Yücedağ hocamın 200+ derslik 24 saatlik içerikten oluşan Asp.Net Core Api - Rapid Api ve Api Consume eğitimini tamamladım ve ortaya çok güzel bir proje çıktı.
-# Projeye Genel Bakış 
+## Projeye Genel Bakış 
+📍 Projemiz bir otelin online rezervasyon sistemi üzerine kurgulanmış bir senaryo işleyişine sahip. </br>
+📍 Proje tamamıyla Api ile geliştirildi. </br>
+📍 Apileri test etmek için Swagger ve Postman kullanıldı. </br>
+📍 Identity ve rolleme de kullanıldı.</br>
 ## 📌 Kullanılan Teknolojiler
-✔Asp.Net Core API </br>
-✔.NET CORE 5.0</br>
-✔API Consume</br>
-✔Entity Framework Core ile Database İşlemleri</br>
-✔Repository Design Pattern Uygulanması</br>
-✔N Tier Mimarisi</br>
-✔Fluent Validation İşlemleri</br>
-✔Veri iletişimi yapmak için DTO kullanımı</br>
-✔Asp.Net Core Identity Kullanımı</br>
-✔Rapid API</br>
-✔JSON Web Token (JWT)</br>
+✔ C#, ASP.NET Core(Dil ve Framework)</br>
+✔ Entity Framework (ORM) 6.0 </br>
+✔ Code First  </br>
+✔ Microsoft SQL Server(MSSQL) (Veritabanı) </br>
+✔ N-Architecture  </br>
+✔ Repository Design Pattern(CRUD işlemlerinde kod tekrarını önlemek ve daha esnek bir yapı sağlamak için.)</br>
+✔ Dependency Injection (Bağımlılıkların yönetimi ve bağımsız bir kod yapısı oluşturmak için.) </br>
+✔ ASP.NET Identity(Kimlik Doğrulama) </br>
+✔ HTML-CSS-Bootstrap </br>
+✔ Rapid API </br>
+✔ Mapping(AutoMapper ile DTO ve Entity dönüşümleri.) </br>
+✔ Validation (FluentValidation ile veri doğrulama süreçleri.) </br>
 ## 📌 Proje içi Görseller
 ![anasayfa1](https://github.com/user-attachments/assets/cd3cf6aa-b2ed-48be-a6ab-235e056b2fbc)
 ![anasayfa2](https://github.com/user-attachments/assets/bfe637bc-9b31-4186-a627-4ff27b0575a0)
